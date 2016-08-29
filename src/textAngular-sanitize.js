@@ -511,6 +511,9 @@ var trim = (function() {
 // Currently allows only the color, background-color, text-align, float, width and height attributes
 // all other attributes should be easily done through classes.
 function validStyles(styleAttr){
+  //bypassing style sanitizer
+  return styleAttr;
+
 	var result = '';
 	var styleArray = styleAttr.split(';');
 	angular.forEach(styleArray, function(value){
